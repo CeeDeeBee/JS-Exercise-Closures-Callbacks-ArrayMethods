@@ -165,9 +165,9 @@ function processDuplicateFree(list, cb) {
   // return cb(Array.from(new Set(list)));
 
   let deDuped = [];
-  list.forEach((el, index) => {
-    if (list.indexOf(el) === index) {
-      deDuped.push(list[index]);
+  list.forEach(el => {
+    if (!deDuped.includes(el)) {
+      deDuped.push(el);
     }
   });
 
